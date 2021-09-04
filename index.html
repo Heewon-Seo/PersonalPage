@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hailey</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Noto+Serif+KR:wght@200;300;400&family=Roboto+Slab:wght@100;200;300;400;500&family=Yeon+Sung&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+  <link href="lib/photostack/photostack.css" rel="stylesheet">
+  <link href="css/toastr.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/words.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+</head>
+
+<body>
+<h6><i class="fas fa-music"></i> Coldplay | A Sky Full of Stars</h6>
+<div class="music">
+<button value="play" id="play"><i class="far fa-play-circle"></i></button>
+<button value="play" id="pause"><i class="far fa-pause-circle"></i></button>
+</div>
+  <!-- ********** HEADER ********** -->
+      <ul id="menu">
+        <li class="icon fa fa-moon" id="home"></li>
+        <li class="icon fa fa-camera-retro" id="photo"></li>
+      </ul>
+  <div class="intro" id="intro">
+    <div class="content">
+      <div id="capture" style="background-image: url('img/stars.png');">
+      <div id="large-header" class="large-header">
+        <canvas id="demo-canvas" class="stars">
+        </canvas>
+        <div class="twinkling">
+        </div>
+        <div class="balls">
+        </div>
+      </div>
+        <h1 class="main-title"><span class="thin">A SKY FULL OF</span> [ME]</h1>
+        <p class="main-tagline" data-html2canvas-ignore="true">
+          <span class="thin"> Insert Any <mark>KEYWORDS</mark> about ME or YOU!</span><br><br>
+        </p>
+        <div class="input-container" data-html2canvas-ignore="true">
+          <div class="input-wrapper">
+            <form id="word-form">
+            <input id="input-text" maxlength="10"/>
+            <div id="output"><span class="zoom-letter"></span></div>
+            <label>type here</label>
+              <div class="buttons centered">
+                <button type="submit" class="submit">
+                  <i class="far fa-arrow-alt-circle-up"></i>
+                </button>
+                <button class="capture">
+                  <i class="fas fa-camera"></i>
+                </button>
+                <button class="initialize">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+    <!--content-->
+  <!-- /intro -->
+  <!-- ********** GREY SECTION ********** -->
+  <div id="grey">
+    <div class="container grey-box">
+      <div class="row">
+        <div class="col-md-1 centered">
+          <i class="fas fa-star fa-2x"></i>
+        </div>
+        <div class="col-md-2">
+          <h5>About Heewon</h5>
+          <hr>
+          <p>제 자신을 표현하는 단어들을 <br>하늘에 띄워보았습니다<br> 어떤 단어들로 표현되었는지<br> 읽어보세요 : )</p>
+        </div>
+        <div class="col-md-1 centered">
+          <i class="fas fa-cloud fa-2x"></i>
+        </div>
+        <div class="col-md-2">
+          <h5>FLOAT YOUR WORDS</h5>
+          <hr>
+          <p><i class="far fa-trash-alt"></i> 을 눌러 단어를 모두 지우고<br>'나'를 표현하는 단어들로 화면을 채워보세요!</p>
+        </div>
+        <div class="col-md-1 centered">
+          <i class="fas fa-file-download fa-2x"></i>
+        </div>
+        <div class="col-md-2">
+          <h5>SAVE YOUR WORDS</h5>
+          <hr>
+          <p><i class="fas fa-camera"></i> 을 눌러<br>하늘에 수놓아진 단어들을 소장하세요!</p>
+        </div>
+        <div class="col-md-1 centered">
+          <i class="far fa-lightbulb fa-2x"></i>
+        </div>
+        <div class="col-md-2">
+          <h5>WORDS HAVE POWER</h5>
+          <hr>
+          <p>단어들은 생각보다 강력한 힘을 가집니다<br>아름다운 단어들로 나를 표현해 보세요 : )</p>
+        </div>
+      </div>
+      <!--/row-->
+    </div>
+    <!--/container -->
+  </div>
+
+    <!-- /grey -->
+  <section id="memories">
+    <div class="container memories">
+      <div class="row">
+        <img class="camera aligncenter" src="img/camera.png" alt="">
+        <h1 class="centered">MY MEMORIES</h1>
+        <hr>
+        <p>추억들을 공유합니다</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="photostack-1" class="photostack photostack-start">
+    <div>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img1.jpeg" alt="img01"/></a>
+        <figcaption>
+          <h2 class="photostack-title">더워 죽을뻔 했던 앙코르 와트</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img2.jpeg" alt="img02"/></a>
+        <figcaption>
+          <h2 class="photostack-title">도쿄의 크리스마스!</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img3.jpeg" alt="img03"/></a>
+        <figcaption>
+          <h2 class="photostack-title">예쁘지만 무서운 온천</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img4.jpeg" alt="img04"/></a>
+        <figcaption>
+          <h2 class="photostack-title">고궁에서는 프랑스 냄새가 난다</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img6.jpeg" alt="img06"/></a>
+        <figcaption>
+          <h2 class="photostack-title">제 3의 (애증의) 고향</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img7.JPG" alt="img07"/></a>
+        <figcaption>
+          <h2 class="photostack-title">그림 같았던 캄보디아</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img8.jpeg" alt="img08"/></a>
+        <figcaption>
+          <h2 class="photostack-title">저때부터 왕큰 곰을 좋아했군</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img9.jpeg" alt="img09"/></a>
+        <figcaption>
+          <h2 class="photostack-title">나만 즐거움</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img10.jpeg" alt="img10"/></a>
+        <figcaption>
+          <h2 class="photostack-title">신들이 사는 곳 같았던</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img11.jpeg" alt="img11"/></a>
+        <figcaption>
+          <h2 class="photostack-title">북유럽의 늦여름은 비만 오더라</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img12.jpeg" alt="img12"/></a>
+        <figcaption>
+          <h2 class="photostack-title">제2의 (애증의) 고향</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img13.jpeg" alt="img13"/></a>
+        <figcaption>
+          <h2 class="photostack-title">NOOOOEEEEEL!!!!!!!!</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img14.jpeg" alt="img14"/></a>
+        <figcaption>
+          <h2 class="photostack-title">본토의 츄러스</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img15.jpeg" alt="img15"/></a>
+        <figcaption>
+          <h2 class="photostack-title">노트르담의 노엘!!!!!!!!!!</h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/img16.jpeg" alt="img16"/></a>
+        <figcaption>
+          <h2 class="photostack-title">여행 가고 싶다</h2>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+<footer>
+  <div class="container centered">
+    <div class="col-md-6 col-md-offset-3">
+      <p class="mt">
+        <a href="mailto:heewon9123@gmail.com" target="_blank"><i class="fa fa-envelope-open fa-2x"></i></a>
+        <a href="https://www.instagram.com/hweoen/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="http://qr.kakao.com/talk/vol8.E6EuPMuQJyV2.CiqcbCIIQ-" target="_blank"><i class="fa fa-comments fa-2x"></i></a>
+      </p>
+      <div class="credits">
+        contact me any time!
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/modernizr/modernizr.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/classie/classie.js"></script>
+  <script src="lib/photostack/photostack.js"></script>
+  <script src="lib/easing/easing.js"></script>
+  <script src="lib/tweenlite/tweenlite.min.js"></script>
+  <script src="lib/tweenlite/easepack.min.js"></script>
+  <script src="lib/tweenlite/init.js"></script>
+  <script src="js/toastr.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="js/words.js"></script>
+  <script src="js/polaroyd.js"></script>
+<script src="https://connect.soundcloud.com/sdk.js"></script>
+<script src="js/music.js"></script>
+
+
+</body>
+</html>

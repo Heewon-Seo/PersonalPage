@@ -1,0 +1,159 @@
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.8;
+    z-index: 3000;
+    font-family: 'Roboto Slab', 'Noto Serif KR', serif;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    overflow: hidden;
+    letter-spacing: -1px;
+    background-color: rgba(12, 12, 29, 0.3);
+}
+
+.input-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    line-height: 34px;
+    font-size: 20px;
+    font-family:'Roboto Slab', 'Noto Serif KR', serif;
+}
+.input-wrapper {position: relative;}
+
+#input-text, #output{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    resize: none;
+    min-height: 34px;
+}
+#input-text {
+    position: absolute;
+    color: whitesmoke;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+#output {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.60);
+    color: whitesmoke;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    cursor: text;
+    position: relative;
+    z-index: 10;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.zoom-letter{
+    font-size: 20px;
+    line-height: 28px;
+    color: inherit;
+    animation: fontZoom 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
+}
+@keyframes fontZoom {
+    0%{font-size: inherit; color:transparent;}
+    50%{font-size: 34px; color:inherit;}
+    100%{font-size: inherit; color:inherit;}
+}
+
+.input-wrapper label {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 18%;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    color: rgba(246, 246, 246, 0.7);
+    z-index: 11;
+}
+#input-text:focus ~ label,
+.input-text-valid {
+    transform: translate(-25%,-95%);
+    font-size: 13px;
+}
+.get-cozy {
+    left: 0 !important;
+    color: rgba(245, 245, 245, 0.87);
+}
+#input-text:focus ~ label.get-cozy {
+    transform: translate(0%,-95%) !important;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    width: 0;
+    height:2px;
+    background-color: #fff;
+    transition: width 0.15s ease-in-out;
+    z-index: 3000;
+}
+#input-text:focus ~ .highlight {
+    z-index: 3000;
+}
+
+.text-caret {
+    font-size: 20px;
+    line-height: 28px;
+    border-right: 3px solid transparent;
+    z-index: 3001;
+}
+#input-text:focus ~ #output .text-caret {
+    animation: fontZoom 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, blinkCaret 1s step-end infinite;
+}
+@keyframes blinkCaret {
+    from, to { border-color: transparent }
+    50% { border-color: inherit; }
+}
+button {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    box-shadow: none;
+    color: whitesmoke;
+    border: none;
+    transition: all 1s;
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+    opacity: 0.5;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    min-width: 100px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+#output {
+    width: 60%;
+}
+label {
+    position: relative;
+}
