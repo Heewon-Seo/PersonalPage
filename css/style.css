@@ -500,6 +500,8 @@ h6 > i {
   top: 50px;
   left: 15px;
   z-index: 100;
+  font-size: 20px;
+  letter-spacing: 13px;
 }
 
 .memories {
