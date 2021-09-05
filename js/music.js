@@ -16,11 +16,15 @@ function playTrack(e) {
             stream = sound;
             stream.setVolume(10);
             stream.play();
+            playBtn.style.color = "grey";
+            pauseBtn.style.color = "white";
         });
     }
     else {
         stream.setVolume(10);
         stream.play();
+        playBtn.style.color = "grey";
+        pauseBtn.style.color = "white";
     }
 }
 
@@ -29,5 +33,7 @@ function pauseTrack(e) {
     e.preventDefault();
     if(stream) {
         stream.pause();
+        playBtn.style.color = "white";
+        pauseBtn.style.color = "grey";
     }
 }

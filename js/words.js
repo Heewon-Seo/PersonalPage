@@ -16,7 +16,7 @@ const colors = [
 ];
 const ballBox = document.querySelector(".balls");
 const word = document.querySelector("#input-text");
-const basicWords = ["so what?","긍정적인","잘웃는","열심히하는","Carpe Diem","INTP", "여행", "음악", "페스티벌", "덕질", "동물","언어","프랑스","일본"];
+const basicWords = ["so what?","긍정적인","SMILE:D","열심히하는","Carpe Diem","INTP", "여행", "음악", "페스티벌", "덕질", "동물","언어","Besançon","東京"];
 let words = [];
 const savedWords = localStorage.getItem("words");
 const button = document.querySelector(".submit");
