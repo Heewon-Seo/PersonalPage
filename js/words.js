@@ -1,5 +1,19 @@
 const balls = [];
-
+const colors = [
+    "-webkit-gradient(radial, 50% 50%, 36, 50% 50%, 40,from(rgba(150, 111, 195, 0.2)), color-stop(0.3, rgba(150, 111, 195, 0.3)),  to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(224, 124, 203, 0.1)), color-stop(0.2, rgba(224, 124, 203, 0.2)), to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 38, 50% 50%, 46, from(rgba(145, 75, 113, 0.3)), color-stop(0.3, rgba(145, 75, 113, 0.4)),  to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 20, 50% 50%, 80, from(rgba(145, 75, 113, 0)), color-stop(0.3, rgba(145, 75, 113, 0.2)),  to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 30, 50% 50%, 90, from(rgba(145, 75, 113, 0)), color-stop(0.5, rgba(145, 75, 113, 0.2)), to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 30, 50% 50%, 50, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent))",
+    "-webkit-gradient(radial, 50% 50%, 16, 50% 50%, 20, from(rgba(37, 85, 79, 0.2)), color-stop(0.2, rgba(37,85,79, 0.3)), to(transparent))",
+    "-webkit-radial-gradient(circle contain, rgba(150, 111, 195, 0.2) 36px, rgba(150, 111, 195, 0.3) 38px, transparent 40px)",
+    "-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px)",
+    "-webkit-radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px)",
+    "radial-gradient(circle contain, rgba(114, 209, 244, 0.2) 36px, rgba(114, 209, 244, 0.3) 37px, transparent 40px)",
+    "radial-gradient(circle contain, rgba(224, 124, 203, 0.2) 16px, rgba(224, 124, 203, 0.3) 17px, transparent 20px)"
+];
 const ballBox = document.querySelector(".balls");
 const word = document.querySelector("#input-text");
 const basicWords = ["so what?","긍정적인","잘웃는","열심히하는","Carpe Diem","INTP", "여행", "음악", "페스티벌", "덕질", "동물","언어","프랑스","일본"];
@@ -51,7 +65,7 @@ button.addEventListener("click",function (e) {
         addBall();
         saveWords();
         moveBalls();
-        word.value=""; // 이거 왜 안되지?
+        word.value="";
         document.getElementById("output").innerText="";
     }
 });
@@ -89,6 +103,7 @@ function addBall () {
     let ball = document.createElement("div");
     ballBox.appendChild(ball);
     ball.classList.add("ball");
+    ball.style.background = `${colors[Math.floor(Math.random()*colors.length)]}`;
     ball.style.left = `${Math.floor(Math.random() * 90)}%`;
     ball.style.top = `${Math.floor(Math.random() * 90)}%`;
     ball.style.transform = `scale(${Math.random()})`;
@@ -104,6 +119,7 @@ if(words!==null) {
         let ball = document.createElement("div");
         ballBox.appendChild(ball);
         ball.classList.add("ball");
+        ball.style.background = `${colors[Math.floor(Math.random()*colors.length)]}`;
         ball.style.left = `${Math.floor(Math.random() * 90)}%`;
         ball.style.top = `${Math.floor(Math.random() * 90)}%`;
         ball.style.transform = `scale(${Math.random()})`;
