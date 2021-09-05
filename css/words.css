@@ -75,25 +75,30 @@
 .input-wrapper label {
     position: absolute;
     margin: 0;
-    padding: 0;
-    left: 18%;
+    text-align: left;
+    padding-left: 15%;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 100;
     pointer-events: none;
     transition: 0.2s ease-in-out;
     color: rgba(246, 246, 246, 0.7);
     z-index: 11;
 }
+
 #input-text:focus ~ label,
 .input-text-valid {
     transform: translate(-25%,-95%);
     font-size: 13px;
 }
 .get-cozy {
-    left: 0 !important;
     color: rgba(245, 245, 245, 0.87);
 }
+
 #input-text:focus ~ label.get-cozy {
     transform: translate(0%,-95%) !important;
 }
+
 
 .highlight {
     position: absolute;

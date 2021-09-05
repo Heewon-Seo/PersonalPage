@@ -1,3 +1,5 @@
+FontAwesomeConfig = { searchPseudoElements: true };
+
 const home = document.getElementById("home");
 const photo = document.getElementById("photo");
 const homeLocation = document.querySelector("#intro").offsetTop;
